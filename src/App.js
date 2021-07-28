@@ -1,10 +1,16 @@
 import React from "react";
 import "./app.css";
+import PersonalData from "./form/PersonalData";
+import Education from "./form/Education";
 import useForm from "./lib/useForm";
-import FormData from "./FormData";
 
 const App = () => {
-  const {inputs, handleChange} = useForm({
+  const { inputs, handleChange } = useForm({
+    qualifications: "",
+    positions: "",
+    year: "",
+    indexNo: "",
+    examiningAuthority: "",
     surname: '',
     othernames: '',
     sex: '',
@@ -13,7 +19,94 @@ const App = () => {
     countryOfResidence: "",
     contactAddress: "",
     home: "",
-  });
+    district: "",
+    village: "",
+    subCountry: "",
+    country: "",
+    maritalStatus: "",
+    nameOfSpouse: "",
+    sponsor: "",
+    address: "",
+    telephone: "",
+    mobile: "",
+    email: "",
+    studentNumber: "",
+    examsFieldsOne: "",
+    examsFieldsTwo: "",
+    examsFieldsThree: "",
+    examsFieldsFour: "",
+    examsFieldsFive: "",
+    examsFieldsSix: "",
+
+    paperOneFieldOne: "",
+    paperOneFieldTwo: "",
+    paperOneFieldThree: "",
+    paperOneFieldFour: "",
+    paperOneFieldFive: "",
+    paperOneFieldSix: "",
+
+    paperTwoFieldOne: "",
+    paperTwoFieldTwo: "",
+    paperTwoFieldThree: "",
+    paperTwoFieldFour: "",
+    paperTwoFieldFive: "",
+    paperTwoFieldSix: "",
+
+    paperThreeFieldOne: "",
+    paperThreeFieldTwo: "",
+    paperThreeFieldThree: "",
+    paperThreeFieldFour: "",
+    paperThreeFieldFive: "",
+    paperThreeFieldSix: "",
+
+    paperFourFieldOne: "",
+    paperFourFieldTwo: "",
+    paperFourFieldThree: "",
+    paperFourFieldFour: "",
+    paperFourFieldFive: "",
+    paperFourFieldSix: "",
+
+    paperFiveFieldOne: "",
+    paperFiveFieldTwo: "",
+    paperFiveFieldThree: "",
+    paperFiveFieldFour: "",
+    paperFiveFieldFive: "",
+    paperFiveFieldSix: "",
+
+    paperSixFieldOne: "",
+    paperSixFieldTwo: "",
+    paperSixFieldThree: "",
+    paperSixFieldFour: "",
+    paperSixFieldFive: "",
+    paperSixFieldSix: "",
+
+    resultFieldOne: "",
+    resultFieldTwo: "",
+    resultFieldThree: "",
+    resultFieldFour: "",
+    resultFieldFive: "",
+    resultFieldSix: "",
+
+    pointFieldOne: "",
+    pointFieldTwo: "",
+    pointFieldThree: "",
+    pointFieldFour: "",
+    pointFieldFive: "",
+    pointFieldSix: "",
+
+    dateFieldOne: "",
+    dateFieldTwo: "",
+    dateFieldThre: "",
+
+    institutionFieldOne: "",
+    institutionFieldTwo: "",
+    institutionFieldThre: "",
+
+    qualificationsFieldOne: "",
+    qualificationsFieldTwo: "",
+    qualificationsFieldThre: "",
+  })
+
   return (
     <form className="form">
       <div className="form__group">
@@ -50,94 +143,8 @@ const App = () => {
         </label>
       </div>
 
-      <div className="form__group form__group__personal__data">
-        <span className="intake">Section One: Personal Data</span>
-
-        <p>
-          <span>1.1</span>
-          <label htmlFor="surname">
-            Surname:
-            <input
-              id="surname"
-              value={inputs.surname}
-              name="surname"
-              onChange={handleChange}
-              type="text" />
-          </label>
-          <label htmlFor="oternames">
-            Othernames:
-            <input
-              id="othernames"
-              value={inputs.othernames}
-              name="othernames"
-              onChange={handleChange}
-              type="text"
-              />
-          </label>
-          <label htmlFor="sex">
-            Sex:
-            <input
-              id="sex"
-              value={inputs.sex}
-              name="sex"
-              onChange={handleChange}
-              type="text" />
-          </label>
-        </p>
-
-        <p>
-          <span>1.2</span>
-          <label htmlFor="dob">
-            Date Of Birth:
-            <input
-              id="dob"
-              name="dob"
-              value={inputs.dob}
-              onChange={handleChange}
-              type="text" />
-          </label>
-          <label htmlFor="nationality">
-            Nationality:
-            <input
-              id="nationality"
-              name="nationality"
-              value={inputs.nationality}
-              onChange={handleChange}
-              type="text" />
-          </label>
-          <label htmlFor="countryOfResidence">
-            Conuntry Of Residence:
-            <input
-              id="name"
-              name="countryOfResidence"
-              value={inputs.countryOfResidence}
-              onChange={handleChange}
-              type="text" />
-          </label>
-        </p>
-
-        <p>
-          <span>1.2</span>
-          <label htmlFor="contactAddress">
-            Contact Address:
-            <input
-              id="contactAddress"
-              name="contactAddress"
-              value={inputs.contactAddress}
-              onChange={handleChange}
-              type="text" />
-          </label>
-          <label htmlFor="home">
-            Home:
-            <input
-              id="home"
-              name="home"
-              value={inputs.home}
-              onChange={handleChange}
-              type="text" />
-          </label>
-        </p>
-      </div>
+      <PersonalData inputs={inputs} handleChange={handleChange}/>
+      <Education inputs={inputs} handleChange={handleChange}/>
     </form>
   );
 }

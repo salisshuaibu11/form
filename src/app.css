@@ -1,8 +1,98 @@
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table tr {
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+table td input {
+  outline: none;
+  border: none;
+  width: 100%
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
 .form {
   width: 80vw;
   margin-top: 12rem;
   padding: 10px;
   height: fit-content;
+}
+
+.form > .form__group {
+  width: 100%;
+}
+
+.form > .form__group:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 .form > .form__group .intake {
@@ -23,7 +113,8 @@
     margin-right: 2rem;
 }
 
-.form > .form__group__personal__data label > input {
+.form > .form__group__personal__data label > input,
+.form > .form__group__education__data label > input  {
     border: none;
     background: none;
     outline: none;

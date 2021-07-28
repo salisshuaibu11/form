@@ -1,4 +1,4 @@
-export const data = [
+export const inputFields = [
   {
     surname: "Surname",
     othernames: "Othernames",

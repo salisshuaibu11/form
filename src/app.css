@@ -113,10 +113,69 @@ table th {
     margin-right: 2rem;
 }
 
-.form > .form__group__personal__data label > input,
-.form > .form__group__education__data label > input  {
+.form__group__personal__data label > input,
+.form__group__education__data label > input  {
     border: none;
     background: none;
     outline: none;
     border-bottom: 1px dashed #000;
+}
+
+/* :checked - resize to full height */
+.tab input:checked ~ .tab-content {
+  max-height: 100vh;
+}
+
+.tabs {
+  margin-bottom: 10px;
+}
+
+.tabs a {
+  text-decoration: none;
+  color: #000;
+  background: #ddd;
+  border: 1px solid #dedede;
+  padding: 5px;
+}
+
+.tabs a:not(:last-child) {
+  margin-right: 10px;
+}
+
+/* Label formatting when open */
+.tab input:checked + label {
+  /*@apply text-xl p-5 border-l-2 border-indigo-500 bg-gray-100 text-indigo*/
+  font-size: 1.25rem; /*.text-xl*/
+  padding: 1.25rem; /*.p-5*/
+}
+/* Icon */
+.tab label::after {
+  float: right;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  text-align: center;
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.tab input[type='radio'] + label::after {
+  content: '\25BE';
+  font-weight: bold; /*.font-bold*/
+  border-radius: 9999px; /*.rounded-full */
+}
+.tab input[type='radio']:checked + label::after {
+  transform: rotateX(180deg);
+}
+
+.hide {
+  display: "none";
+}
+
+.show {
+  display: "block"
 }

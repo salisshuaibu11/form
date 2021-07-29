@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./app.css";
+
 import PersonalData from "./form/PersonalData";
 import Education from "./form/Education";
+import Programmes from "./form/Programmes";
+import Accomodation from "./form/Accomodation";
+
 import useForm from "./lib/useForm";
 
 const App = () => {
   const { inputs, handleChange } = useForm({
     qualifications: "",
     positions: "",
+    certificateYear: "",
+    certificateIndexNo: "",
+    certificateAuthority: "",
     year: "",
     indexNo: "",
     examiningAuthority: "",
@@ -30,6 +37,22 @@ const App = () => {
     telephone: "",
     mobile: "",
     email: "",
+    eng: "",
+    el: "",
+    re: "",
+    h: "",
+    g: "",
+    comp: "",
+    p: "",
+    c: "",
+    b: "",
+    m: "",
+    tcg: "",
+    art: "",
+    mus: "",
+    agr: "",
+    com: "",
+    accs: "",
     studentNumber: "",
     examsFieldsOne: "",
     examsFieldsTwo: "",
@@ -107,6 +130,31 @@ const App = () => {
     qualificationsFieldThre: "",
   })
 
+  useEffect(() => {
+    let tabsContainer = document.querySelector("#tabs");
+    let tabTogglers = tabsContainer.querySelectorAll("a");
+
+    tabTogglers.forEach((toggler) => {
+      toggler.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        tabTogglers.forEach((tabs) => tabs.classList.remove("hide"));
+
+        let tabName = toggler.getAttribute("href"); //.split("#")[1];
+        let tabContents = document.querySelector("#tab-contents");
+
+        for (let i = 0; i < tabContents.children.length; i++) {
+          tabContents.children[i].classList.remove("hide");
+          if ("#" + tabContents.children[i].id === tabName) {
+              continue;
+          }
+          tabContents.children[i].classList.add("hide");
+        }
+        e.target.parentElement.querySelector(`a[href="${tabName}"]`).classList.add("show");
+      });
+    });
+  })
+
   return (
     <form className="form">
       <div className="form__group">
@@ -143,8 +191,26 @@ const App = () => {
         </label>
       </div>
 
-      <PersonalData inputs={inputs} handleChange={handleChange}/>
-      <Education inputs={inputs} handleChange={handleChange}/>
+      <div id="tabs" className="tabs">
+        <a href="#personalData">Personal Data</a>
+        <a href="#education">Education / Background</a>
+        <a href="#education">Programmes</a>
+        <a href="#education">Accomodation/Declaration</a>
+      </div>
+      <div id="tab-contents" className="tab-contents">
+        <div id="personalData">
+          <PersonalData inputs={inputs} handleChange={handleChange}/>
+        </div>
+        <div id="education" className="hide">
+            <Education inputs={inputs} handleChange={handleChange}/>
+        </div>
+        <div id="programmes" className="hide">
+            <Programmes inputs={inputs} handleChange={handleChange}/>
+        </div>
+        <div id="accommodation" className="hide">
+            <Accomodation inputs={inputs} handleChange={handleChange}/>
+        </div>
+      </div>
     </form>
   );
 }

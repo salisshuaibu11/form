@@ -14,7 +14,7 @@ const EducationAndBackground = (props) => {
           <span>2.1</span> Uganda Advanced Certificate of Education (UACE) or Equivalent
         </span>
       </h2>
-
+      
       <p>
         <span>1.1</span>
         <label htmlFor="year">
@@ -264,6 +264,213 @@ const EducationAndBackground = (props) => {
           </tbody>
         </table>
       </p>
+
+      <p>
+        <p>
+          <span style={{marginRight: '2rem'}}>2.2</span>
+          <span>Uganda Certificate Of Education (UCE) or Equivalent</span>
+        </p>
+        <label htmlFor="certificateYear">
+          Year:
+          <input
+            id="certificateYear"
+            value={inputs.certificateYear}
+            name="certificateYear"
+            onChange={handleChange}
+            type="text" />
+        </label>
+
+        <label htmlFor="certificateIndexNo">
+          Index Number:
+          <input
+            id="certificateIndexNo"
+            value={inputs.certificateIndexNo}
+            name="certificateIndexNo"
+            onChange={handleChange}
+            type="text"
+            />
+        </label>
+
+        <label htmlFor="certificateAuthority">
+          ExaminingAuthority:
+          <input
+            id="certificateAuthority"
+            value={inputs.certificateAuthority}
+            name="certificateAuthority"
+            onChange={handleChange}
+            type="text" />
+        </label>
+        <p>Enter Result grades (figures) for UCE in boxes below</p>
+        <table>
+          <thead>
+            <th>Eng</th>
+            <th>EL</th>
+            <th>RE</th>
+            <th>H</th>
+            <th>G</th>
+            <th>COMP</th>
+            <th>P</th>
+            <th>C</th>
+            <th>B</th>
+            <th>M</th>
+            <th>TCG</th>
+            <th>ART</th>
+            <th>MUS</th>
+            <th>AGR</th>
+            <th>COM</th>
+            <th>ACCs</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input
+                    id="eng"
+                    value={inputs.eng}
+                    name="eng"
+                    onChange={handleChange}
+                    type="text"
+                />
+              </td>
+              <td>
+                <input
+                    id="el"
+                    value={inputs.el}
+                    name="el"
+                    onChange={handleChange}
+                    type="text"
+                />
+              </td>
+              <td>
+                <input
+                    id="re"
+                    value={inputs.re}
+                    name="re"
+                    onChange={handleChange}
+                    type="text"
+                />
+              </td>
+              <td>
+                <input
+                    id="h"
+                    value={inputs.h}
+                    name="h"
+                    onChange={handleChange}
+                    type="text"
+                />
+              </td>
+              <td>
+                <input
+                    id="g"
+                    value={inputs.g}
+                    name="g"
+                    onChange={handleChange}
+                    type="text"
+                />
+              </td>
+              <td>
+                <input
+                    id="comp"
+                    value={inputs.comp}
+                    name="comp"
+                    onChange={handleChange}
+                    type="text"
+                />
+              </td>
+              <td>
+                <input
+                    id="p"
+                    value={inputs.p}
+                    name="p"
+                    onChange={handleChange}
+                    type="text"
+                />
+              </td>
+              <td>
+                <input
+                    id="c"
+                    value={inputs.c}
+                    name="c"
+                    onChange={handleChange}
+                    type="text"
+                />
+              </td>
+              <td>
+                <input
+                    id="b"
+                    value={inputs.b}
+                    name="b"
+                    onChange={handleChange}
+                    type="text"
+                />
+              </td>
+              <td>
+                <input
+                    id="m"
+                    value={inputs.m}
+                    name="m"
+                    onChange={handleChange}
+                    type="text"
+                />
+              </td>
+              <td>
+                <input
+                    id="tcg"
+                    value={inputs.tcg}
+                    name="tcg"
+                    onChange={handleChange}
+                    type="text"
+                />
+              </td>
+              <td>
+                <input
+                    id="art"
+                    value={inputs.art}
+                    name="art"
+                    onChange={handleChange}
+                    type="text"
+                />
+              </td>
+              <td>
+                <input
+                    id="mus"
+                    value={inputs.mus}
+                    name="mus"
+                    onChange={handleChange}
+                    type="text"
+                />
+              </td>
+              <td>
+                <input
+                    id="agr"
+                    value={inputs.agr}
+                    name="agr"
+                    onChange={handleChange}
+                    type="text"
+                />
+              </td>
+              <td>
+                <input
+                    id="com"
+                    value={inputs.com}
+                    name="com"
+                    onChange={handleChange}
+                    type="text"
+                />
+              </td>
+              <td>
+                <input
+                    id="accs"
+                    value={inputs.accs}
+                    name="accs"
+                    onChange={handleChange}
+                    type="text"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </p>
+
 
       <p>
         <label htmlFor="qualifications" style={{fontSize: '20px'}}>

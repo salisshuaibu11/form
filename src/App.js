@@ -12,6 +12,15 @@ const App = () => {
   const { inputs, handleChange } = useForm({
     qualifications: "",
     positions: "",
+    intake: "",
+    sessions: "",
+    media: "",
+    website: "",
+    exhibitions: "",
+    self: "",
+    sponsorship: "",
+    name: "",
+    date: "",
     certificateYear: "",
     certificateIndexNo: "",
     certificateAuthority: "",
@@ -140,17 +149,18 @@ const App = () => {
 
         tabTogglers.forEach((tabs) => tabs.classList.remove("hide"));
 
-        let tabName = toggler.getAttribute("href"); //.split("#")[1];
+        let tabName = e.target.hash; //.split("#")[1];
         let tabContents = document.querySelector("#tab-contents");
 
         for (let i = 0; i < tabContents.children.length; i++) {
-          tabContents.children[i].classList.remove("hide");
+          tabContents.children[i].style.display = "none";
           if ("#" + tabContents.children[i].id === tabName) {
+            console.log(tabContents)
               continue;
           }
           tabContents.children[i].classList.add("hide");
         }
-        e.target.parentElement.querySelector(`a[href="${tabName}"]`).classList.add("show");
+        e.target.parentElement.querySelector(`a[href="${tabName}"]`).style.display = "block"
       });
     });
   })
@@ -162,11 +172,22 @@ const App = () => {
 
         <label htmlFor="aprilOrMay">
           APRIL/MAY
-          <input type="checkbox" id="aprilOrMay"/>
+          <input
+            onChange={handleChange}
+            value="APRIL/MAY"
+            name="intake"
+            type="radio"
+            id="aprilOrMay"/>
         </label>
         <label htmlFor="augustOrSeptember">
           AUG/SEP
-          <input type="checkbox" id="augustOrSeptember"/>
+          <input
+            onChange={handleChange}
+            value="AUGUST/SEPTEMBER"
+            name="intake"
+            type="radio"
+            id="augustOrSeptember"
+          />
         </label>
       </div>
 
@@ -175,19 +196,19 @@ const App = () => {
 
         <label htmlFor="regular">
           Regular
-          <input type="checkbox" id="regular"/>
+          <input onChange={handleChange} value="regular" type="radio" name="sessions" id="regular"/>
         </label>
         <label htmlFor="weekend">
           Weekend
-          <input type="checkbox" id="weekend"/>
+          <input onChange={handleChange} value="weekend" type="radio" name="sessions" id="weekend"/>
         </label>
         <label htmlFor="evening">
           Evening
-          <input type="checkbox" id="evening"/>
+          <input onChange={handleChange} value="evening" type="radio" name="sessions" id="evening"/>
         </label>
         <label htmlFor="online">
           Online
-          <input type="checkbox" id="online"/>
+          <input onChange={handleChange} value="online" type="radio" name="sessions" id="online"/>
         </label>
       </div>
 
@@ -197,7 +218,7 @@ const App = () => {
         <a href="#education">Programmes</a>
         <a href="#education">Accomodation/Declaration</a>
       </div>
-      <div id="tab-contents" className="tab-contents">
+      <div id="tab-contents">
         <div id="personalData">
           <PersonalData inputs={inputs} handleChange={handleChange}/>
         </div>

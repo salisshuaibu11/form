@@ -1,6 +1,7 @@
 import React from "react";
 
-const Accomodation = () => {
+const Accomodation = (props) => {
+  const { inputs, handleChange } = props;
   return (
     <div className="form__group form__group__education__accomodation">
       <h2 style={{fontSize: "18px"}}>
@@ -18,21 +19,39 @@ const Accomodation = () => {
       <p>
         <label htmlFor="website">
          a) Website
-          <input type="checkbox" id="website"/>
+          <input
+            onChange={handleChange}
+            name="website"
+            value="website"
+            type="checkbox"
+            id="website"
+          />
         </label>
         <label htmlFor="media">
          b) Media (TV, Radio, Newspaper etc.)
-          <input type="text" id="media"/>
+          <input
+            onChange={handleChange}
+            name="media"
+            value={inputs.media}
+            type="text"
+            id="media"
+          />
         </label>
         <label htmlFor="exhibitions">
          c) Exhibitions
-          <input type="text" id="exhibitions"/>
+          <input
+            name="exhibitions"
+            value={inputs.exhibitions}
+            onChange={handleChange}
+            type="text"
+            id="exhibitions"
+            />
         </label>
       </p>
       <p>
         <label htmlFor="others">
          b) Others (Specify)
-          <input style={{width: '80%'}} type="text" id="others"/>
+          <input onChange={handleChange} name="" value="" style={{width: '80%'}} type="text" id="others"/>
         </label>
       </p>
       <div>
@@ -43,9 +62,14 @@ const Accomodation = () => {
             <input type="text" id="sponsorship"/>
           </label>
 
-          <label htmlFor="sponsorship">
+          <label htmlFor="self">
            Self:
-            <input type="checkbox" id="sponsorship"/>
+            <input
+              onChange={handleChange}
+              value="self"
+              name="self"
+              type="checkbox"
+              id="self"/>
           </label>
           <label htmlFor="sponsored">
            Sponsored:
@@ -59,12 +83,26 @@ const Accomodation = () => {
         <p>
           <label htmlFor="name">
            Name:
-            <input style={{width: "40%"}} type="text" id="name"/>
+            <input
+              onChange={handleChange}
+              name="name"
+              value={inputs.name}
+              style={{width: "40%"}}
+              type="text"
+              id="name"
+            />
           </label>
 
-          <label htmlFor="data">
+          <label htmlFor="date">
            Date:
-            <input style={{width: "40%"}} type="text" id="date"/>
+            <input
+              onChange={handleChange}
+              name="date"
+              value={inputs.date}
+              style={{width: "40%"}}
+              type="text"
+              id="date"
+            />
           </label>
         </p>
       </div>

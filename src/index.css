@@ -19,6 +19,15 @@ body {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
+.hide {
+  display: "none";
+}
+
+.show {
+  display: "block";
+  border-bottom: 1px solid #000;
+}
+
 /* input[type="checkbox"] {
   position: absolute;
   opacity: 0;

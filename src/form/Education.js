@@ -14,7 +14,7 @@ const EducationAndBackground = (props) => {
           <span>2.1</span> Uganda Advanced Certificate of Education (UACE) or Equivalent
         </span>
       </h2>
-      
+
       <p>
         <span>1.1</span>
         <label htmlFor="year">
@@ -61,7 +61,7 @@ const EducationAndBackground = (props) => {
           </thead>
           <tbody>
             <tr>
-              <td data-label="Account">
+              <td data-label="Examination Papers">
                 <input
                     id="fieldsOne"
                     value={inputs.examsFieldsOne}
@@ -76,27 +76,27 @@ const EducationAndBackground = (props) => {
               <td>
                 <th>Paper 2</th>
               </td>
-              <td data-label="Account">
+              <td>
                 <th>Paper 3</th>
               </td>
-              <td data-label="Account">
+              <td>
                 <th>Paper 4</th>
               </td>
-              <td data-label="Account">
+              <td>
                 <th>Paper 5</th>
               </td>
-              <td data-label="Account">
+              <td>
                 <th>Paper 6</th>
               </td>
-              <td data-label="Account">
+              <td data-label="Overall Results">
                 <input type="text" />
               </td>
-              <td data-label="Account">
+              <td data-label="Point For Course">
                 <input type="text" />
               </td>
             </tr>
             <tr>
-              <td data-label="Account">
+              <td data-label="Exam Fields Two">
                 <input
                     id="fieldsTwo"
                     value={inputs.examsFieldsTwo}
@@ -105,7 +105,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td data-label="Account">
+              <td data-label="Paper Fields One">
                 <input
                     id="paperOneFieldOne"
                     value={inputs.paperOneFieldOne}
@@ -114,7 +114,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td data-label="Account">
+              <td data-label="Paper Fields Two">
                 <input
                     id="paperTwoFieldOne"
                     value={inputs.paperTwoFieldOne}
@@ -123,7 +123,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td data-label="Account">
+              <td data-label="Paper Three Fields One">
                 <input
                     id="paperThreeFieldOne"
                     value={inputs.paperThreeFieldOne}
@@ -132,7 +132,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td data-label="Account">
+              <td data-label="Paper Four Fields One">
                 <input
                     id="paperFourFieldOne"
                     value={inputs.paperFourFieldOne}
@@ -141,7 +141,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td data-label="Account">
+              <td data-label="Paper Five Fields One">
                 <input
                     id="paperFiveFieldOne"
                     value={inputs.paperFiveFieldOne}
@@ -150,7 +150,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td data-label="Account">
+              <td data-label="Paper Six Fields One">
                 <input
                     id="paperSixFieldOne"
                     value={inputs.paperSixFieldOne}
@@ -159,7 +159,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td data-label="Account">
+              <td data-label="Result Fields Two">
                 <input
                     id="resultFieldOne"
                     value={inputs.resultFieldOne}
@@ -168,7 +168,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td data-label="Account">
+              <td data-label="Point Fields One">
                 <input
                     id="pointFieldOne"
                     value={inputs.pointFieldOne}
@@ -179,7 +179,7 @@ const EducationAndBackground = (props) => {
               </td>
             </tr>
             <tr>
-              <td data-label="Account">
+              <td data-label="Exam Fields Three">
                 <input
                     id="fieldsThree"
                     value={inputs.examsFieldsThree}
@@ -188,7 +188,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td data-label="Account">
+              <td data-label="Paper One Fields Two">
                 <input
                     id="paperOneFieldTwo"
                     value={inputs.paperOneFieldTwo}
@@ -197,7 +197,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td data-label="Account">
+              <td data-label="Paper Two Fields Two">
                 <input
                     id="paperTwoFieldTwo"
                     value={inputs.paperTwoFieldTwo}
@@ -206,7 +206,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td data-label="Account">
+              <td data-label="Paper Three Fields Two">
                 <input
                     id="paperThreeFieldTwo"
                     value={inputs.paperThreeFieldTwo}
@@ -215,7 +215,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td data-label="Account">
+              <td data-label="Paper Four Fields Two">
                 <input
                     id="paperFourFieldTwo"
                     value={inputs.paperFourFieldTwo}
@@ -224,7 +224,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td data-label="Account">
+              <td data-label="Paper Five Fields Two">
                 <input
                     id="paperFiveFieldTwo"
                     value={inputs.paperFiveFieldTwo}
@@ -233,7 +233,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td data-label="Account">
+              <td data-label="Paper Six Fields Two">
                 <input
                     id="paperSixFieldTwo"
                     value={inputs.paperSixFieldTwo}
@@ -242,7 +242,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td data-label="Account">
+              <td data-label="Result Fields Two">
                 <input
                     id="resultFieldTwo"
                     value={inputs.resultFieldTwo}
@@ -251,7 +251,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td data-label="Account">
+              <td data-label="Point Fields Two">
                 <input
                     id="pointFieldTwo"
                     value={inputs.pointFieldTwo}
@@ -322,7 +322,7 @@ const EducationAndBackground = (props) => {
           </thead>
           <tbody>
             <tr>
-              <td>
+              <td data-label="Eng">
                 <input
                     id="eng"
                     value={inputs.eng}
@@ -331,7 +331,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                 />
               </td>
-              <td>
+              <td data-label="el">
                 <input
                     id="el"
                     value={inputs.el}
@@ -340,7 +340,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                 />
               </td>
-              <td>
+              <td data-label="re">
                 <input
                     id="re"
                     value={inputs.re}
@@ -349,7 +349,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                 />
               </td>
-              <td>
+              <td data-label="h">
                 <input
                     id="h"
                     value={inputs.h}
@@ -358,7 +358,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                 />
               </td>
-              <td>
+              <td data-label="g">
                 <input
                     id="g"
                     value={inputs.g}
@@ -367,7 +367,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                 />
               </td>
-              <td>
+              <td data-label="comp">
                 <input
                     id="comp"
                     value={inputs.comp}
@@ -376,7 +376,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                 />
               </td>
-              <td>
+              <td data-label="p">
                 <input
                     id="p"
                     value={inputs.p}
@@ -385,7 +385,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                 />
               </td>
-              <td>
+              <td data-label="c">
                 <input
                     id="c"
                     value={inputs.c}
@@ -394,7 +394,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                 />
               </td>
-              <td>
+              <td data-label="b">
                 <input
                     id="b"
                     value={inputs.b}
@@ -403,7 +403,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                 />
               </td>
-              <td>
+              <td data-label="m">
                 <input
                     id="m"
                     value={inputs.m}
@@ -412,7 +412,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                 />
               </td>
-              <td>
+              <td data-label="tcg">
                 <input
                     id="tcg"
                     value={inputs.tcg}
@@ -421,7 +421,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                 />
               </td>
-              <td>
+              <td data-label="art">
                 <input
                     id="art"
                     value={inputs.art}
@@ -430,7 +430,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                 />
               </td>
-              <td>
+              <td data-label="mus">
                 <input
                     id="mus"
                     value={inputs.mus}
@@ -439,7 +439,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                 />
               </td>
-              <td>
+              <td data-label="agr">
                 <input
                     id="agr"
                     value={inputs.agr}
@@ -448,7 +448,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                 />
               </td>
-              <td>
+              <td data-label="com">
                 <input
                     id="com"
                     value={inputs.com}
@@ -457,7 +457,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                 />
               </td>
-              <td>
+              <td data-label="accs">
                 <input
                     id="accs"
                     value={inputs.accs}
@@ -496,7 +496,7 @@ const EducationAndBackground = (props) => {
           </thead>
           <tbody>
             <tr>
-              <td>
+              <td data-label="Date Field 1">
                 <input
                     id="dateFieldOne"
                     value={inputs.dateFieldOne}
@@ -505,7 +505,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td>
+              <td data-label="Institution Field 1">
                 <input
                     id="institutionFieldOne"
                     value={inputs.institutionFieldOne}
@@ -514,7 +514,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td>
+              <td data-label="Qualification Field 1">
                 <input
                     id="qualificationsFieldOne"
                     value={inputs.qualificationsFieldOne}
@@ -525,7 +525,7 @@ const EducationAndBackground = (props) => {
               </td>
             </tr>
             <tr>
-              <td>
+              <td data-label="Date Field Two">
                 <input
                     id="dateFieldTwo"
                     value={inputs.dateFieldTwo}
@@ -534,7 +534,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td>
+              <td data-label="Institution Field Two">
                 <input
                     id="institutionFieldTwo"
                     value={inputs.institutionFieldTwo}
@@ -543,7 +543,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td>
+              <td data-label="Qualification Field Two">
                 <input
                     id="qualificationsFieldTwo"
                     value={inputs.qualificationsFieldTwo}
@@ -554,7 +554,7 @@ const EducationAndBackground = (props) => {
               </td>
             </tr>
             <tr>
-              <td>
+              <td data-label="Date Field Three">
                 <input
                     id="dateFieldThree"
                     value={inputs.dateFieldThree}
@@ -563,7 +563,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td>
+              <td data-label="Institution Field Three">
                 <input
                     id="institutionFieldThree"
                     value={inputs.institutionFieldThree}
@@ -572,7 +572,7 @@ const EducationAndBackground = (props) => {
                     type="text"
                     />
               </td>
-              <td>
+              <td data-label="Qualification Field Three">
                 <input
                     id="qualificationsFieldThree"
                     value={inputs.qualificationsFieldThree}

@@ -6,7 +6,18 @@ export default function useForm(initial = {}) {
 
   function handleChange(e) {
     let { value, name, type } = e.target;
-
+    //const value = type === "checkbox" :
+    if (type === "radio" && e.target.checked) {
+      setInputs({
+        ...inputs,
+        [name]: e.target.value
+      })
+    } else {
+      setInputs({
+        ...inputs,
+        [value]: ""
+      })
+    }
     setInputs({
       // copy the exisiting state
       ...inputs,

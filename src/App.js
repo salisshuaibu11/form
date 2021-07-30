@@ -17,6 +17,7 @@ const App = () => {
     media: "",
     website: "",
     exhibitions: "",
+    programs: "",
     self: "",
     sponsorship: "",
     name: "",
@@ -158,7 +159,6 @@ const App = () => {
               continue;
           }
           tabContents.children[i].style.display = "none";
-          console.log(tabContents.children[i])
         }
         //e.target.parentElement.querySelector(`a[href="${tabName}"]`).classList.add("border")
       });

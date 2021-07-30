@@ -1,0 +1,34 @@
+.form__group__education__data {
+  min-width: fit-content;
+}
+
+.form__group__education__data span {
+  font-size: 1.5rem;
+}
+
+.form__group__education__data label > input {
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 1px solid #000;
+}
+
+.form__group__education__data > p.first{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  text-align: center;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 1rem;
+}
+
+.form__group__education__data div.second label {
+  margin-right: 2rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .form__group__education__data > p {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: auto;
+  }
+}

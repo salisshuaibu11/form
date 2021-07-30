@@ -1,5 +1,6 @@
 import React from "react";
 import useForm from "../lib/useForm";
+import "../styles/Education.css";
 
 const EducationAndBackground = (props) => {
   const { inputs, handleChange } = props;
@@ -7,44 +8,42 @@ const EducationAndBackground = (props) => {
     <div className="form__group form__group__education__data" style={{marginTop: "2rem"}}>
       <h2 style={{fontSize: "18px"}}>
         <span className="intake" style={{display: "block"}}>
-          <span>2.0</span>
           Section Two: Education And Background
         </span>
         <span className="intake" style={{display: "block", textTransform: "capitalize"}}>
-          <span>2.1</span> Uganda Advanced Certificate of Education (UACE) or Equivalent
+          Uganda Advanced Certificate of Education (UACE) or Equivalent
         </span>
       </h2>
 
-      <p>
-        <span>1.1</span>
+      <p className="first">
         <label htmlFor="year">
-          Year:
           <input
             id="year"
             value={inputs.year}
             name="year"
             onChange={handleChange}
+            placeholder="Year"
             type="text" />
         </label>
 
         <label htmlFor="indexNo">
-          Index Number:
           <input
             id="indexNo"
             value={inputs.indexNo}
             name="indexNo"
             onChange={handleChange}
+            placeholder="Index Number"
             type="text"
             />
         </label>
 
         <label htmlFor="examiningAuthority">
-          ExaminingAuthority:
           <input
             id="examiningAuthority"
             value={inputs.examiningAuthority}
             name="examiningAuthority"
             onChange={handleChange}
+            placeholder="Examination Authority"
             type="text" />
         </label>
       </p>
@@ -267,39 +266,40 @@ const EducationAndBackground = (props) => {
 
       <p>
         <p>
-          <span style={{marginRight: '2rem'}}>2.2</span>
           <span>Uganda Certificate Of Education (UCE) or Equivalent</span>
         </p>
-        <label htmlFor="certificateYear">
-          Year:
-          <input
-            id="certificateYear"
-            value={inputs.certificateYear}
-            name="certificateYear"
-            onChange={handleChange}
-            type="text" />
-        </label>
+        <div className="second">
+          <label htmlFor="certificateYear">
+            <input
+              id="certificateYear"
+              value={inputs.certificateYear}
+              name="certificateYear"
+              onChange={handleChange}
+              placeholder="Year"
+              type="text" />
+          </label>
 
-        <label htmlFor="certificateIndexNo">
-          Index Number:
-          <input
-            id="certificateIndexNo"
-            value={inputs.certificateIndexNo}
-            name="certificateIndexNo"
-            onChange={handleChange}
-            type="text"
-            />
-        </label>
+          <label htmlFor="certificateIndexNo">
+            <input
+              id="certificateIndexNo"
+              value={inputs.certificateIndexNo}
+              name="certificateIndexNo"
+              onChange={handleChange}
+              placeholder="Index Number"
+              type="text"
+              />
+          </label>
 
-        <label htmlFor="certificateAuthority">
-          ExaminingAuthority:
-          <input
-            id="certificateAuthority"
-            value={inputs.certificateAuthority}
-            name="certificateAuthority"
-            onChange={handleChange}
-            type="text" />
-        </label>
+          <label htmlFor="certificateAuthority">
+            <input
+              id="certificateAuthority"
+              value={inputs.certificateAuthority}
+              name="certificateAuthority"
+              onChange={handleChange}
+              placeholder="Examination Authority"
+              type="text" />
+          </label>
+        </div>
         <p>Enter Result grades (figures) for UCE in boxes below</p>
         <table>
           <thead>
@@ -474,7 +474,6 @@ const EducationAndBackground = (props) => {
 
       <p>
         <label htmlFor="qualifications" style={{fontSize: '20px'}}>
-          <span style={{marginRight: "2rem"}}>2.3</span>
           <span>If offered qualifications other than UCE and UACE give details below
           (Attached certified documents of paper and use separate paper if more space
           is needed)</span>

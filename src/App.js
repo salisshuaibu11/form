@@ -153,14 +153,14 @@ const App = () => {
         let tabContents = document.querySelector("#tab-contents");
 
         for (let i = 0; i < tabContents.children.length; i++) {
-          tabContents.children[i].style.display = "none";
+          tabContents.children[i].style.display = "block";
           if ("#" + tabContents.children[i].id === tabName) {
-            console.log(tabContents)
               continue;
           }
-          tabContents.children[i].classList.add("hide");
+          tabContents.children[i].style.display = "none";
+          console.log(tabContents.children[i])
         }
-        e.target.parentElement.querySelector(`a[href="${tabName}"]`).style.display = "block"
+        //e.target.parentElement.querySelector(`a[href="${tabName}"]`).classList.add("border")
       });
     });
   })
@@ -215,8 +215,8 @@ const App = () => {
       <div id="tabs" className="tabs">
         <a href="#personalData">Personal Data</a>
         <a href="#education">Education / Background</a>
-        <a href="#education">Programmes</a>
-        <a href="#education">Accomodation/Declaration</a>
+        <a href="#programmes">Programmes</a>
+        <a href="#accommodation">Accomodation/Declaration</a>
       </div>
       <div id="tab-contents">
         <div id="personalData">
